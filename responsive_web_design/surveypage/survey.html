@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="survey.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Survey Page</title>
+</head>
+
+<body>
+    <div id="cont">
+        <header>
+            <h1 id="title">ECTC Survey Form</h1>
+            <p id="description"><b></b>Thank you for helping us improve the annual Electronic Components & Technology Conference</p>
+        </header>
+        <section>
+            <form id="survey-form" action="" method="post">
+                <label id="name-label" for="name">Name: </label>
+                <input id="name" type="text" name="name" placeholder="Enter your name" required>
+
+                <label id="email-label" for="email">Email: </label>
+                <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+
+                <label id="number-label" for="number">How many times have you attended this conference? (optional)</label>
+                <input id="number" type="number" name="number" placeholder="0" min="1" max="100">
+
+                <label id="dropdown-label" for="dropdown">Which option best describes your current role?</label>
+                <select id="dropdown" class="custom-select">
+                    <option value="student">Student</option>
+                    <option value="professor">Professor</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="manager">Manager</option>
+                </select>
+
+                <fieldset>
+                    <legend>Would you return to this conference?</legend>
+                    <label for="recommend-yes"><input id="recommend-yes" type="radio" name="recommend" value="yes">Yes</label>
+                    <label for="recommend-no"><input id="recommend-no" type="radio" name="recommend" value="no">No</label>
+                    <label for="recommend-undecided"><input id="recommend-undecided" type="radio" name="recommend" value="undecided">Undecided</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What would you like to see improved (check all that apply)</legend>
+                    <label for="improve-food"><input id="improve-food" type="checkbox" name="improve" value="food">Food</label>
+                    <label for="improve-location"><input id="improve-location" type="checkbox" name="improve" value="location">Location</label>
+                    <label for="improve-papers"><input id="improve-papers" type="checkbox" name="improve" value="papers">Research Papers</label>
+                    <label for="improve-speakers"><input id="improve-speakers" type="checkbox" name="improve" value="speakers">Guest Speakers</label>
+                    <label for="improve-sessions"><input id="improve-sessions" type="checkbox" name="improve" value="sessions">Plenary Sessions</label>
+                    <label for="improve-exhibits"><input id="improve-exhibits" type="checkbox" name="improve" value="exhibits">Exhibits</label>
+                </fieldset>
+
+                <label id="comment-label" for="comment">Any comments or suggestions? </label>
+                <textarea id="comment" name="comment" placeholder="Enter text here"></textarea>
+
+                <input id="submit" type="submit">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+#title {
+    padding: 30px 0px;
+    margin-bottom: 0px;
+}
+
+#title, #description {
+    color: white;
+}
+
+#name, #email, #number {
+    padding-left: 12px;
+    border-radius: 4px;
+    border: 0px;
+    height: 38px;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#cont {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+#survey-form {
+    background-color: rgba(7, 2, 21, 0.8);
+    padding: 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+#comment {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    height: 150px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#submit {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #6ad986;
+    border: 0px;
+    padding: 6px 0px;
+}
+
+#submit:hover {
+    background-color: #4fa866;
+}
+
+header {
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    padding: 30px 0px;
+    background: url(https://images.cdn4.stockunlimited.net/preview1300/technology-wallpaper_1807662.jpg) no-repeat center center fixed;;
+    background-size: cover;
+}
+
+legend {
+    font-size: 16px !important;
+    padding-top: 10px !important;
+}
+
+label {
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+select {
+    font-size: 16px;
+    height: 30px;
+}
+
+label input {
+    margin-right: 10px !important;
+}
+
+
