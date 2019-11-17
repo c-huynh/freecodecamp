@@ -1,0 +1,217 @@
+:root {
+    --nav-bg-color: #3a3b38;
+    --nav-text-color: white;
+    --gradient-color-1: #ff8067;
+    --gradient-color-2: #6797ff; 
+    --gradient-color-3: #4dd0ff;
+    --welcome-text-color: white;
+    --project-bg-color: white;
+    --project-text-color: #3a3b38;
+    --project-description-bg-color: #3a3b38;
+    --project-description-text-color: white;
+    --project-description-hover-color: #ff8067;
+    --contact-bg-color: #6797ff;
+    --contact-text-color: white;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0.75em 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0.75em 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 0.5em 20px;
+}
+
+.nav-link {
+    margin: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--nav-text-color);
+}
+
+.project-tile-area {
+    background-color: lightpink;
+    padding-top: 100%;
+    position: relative;
+}
+
+.project-tile {
+    background-color: lightgreen;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-tile:hover .project-name:before {
+    content: "<";
+    width: 40px;
+    color: var(--project-description-hover-color);
+} 
+
+.project-tile:hover .project-name:after {
+    content: "/>";
+    width: 40px;
+    color: var(--project-description-hover-color);
+} 
+
+.img-area {
+    background-color: red;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.project-name {
+    background-color: var(--project-description-bg-color);
+    color: var(--project-description-text-color);
+    padding: 20px 20px;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webpage-screenshot {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+.contact-link {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px 20px;
+    color: black;
+    line-height: 40px;
+    width: 180px;
+    flex-shrink: 1;
+    color: var(--contact-text-color);
+}
+
+.contact-link:hover {
+    font-size: 30px;
+}
+
+.fa-margin {
+    margin: 0px 10px;
+}
+
+#container {
+    height: auto;
+    width: 100vw;
+    background-color: lightgrey;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background-color: var(--nav-bg-color);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#main-content {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#welcome-section {
+    background: linear-gradient(25deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+    color: var(--welcome-text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects {
+    background-color: var(--project-bg-color);
+    color: var(--project-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+#project-header {
+    margin: 80px 0px 60px 0px;
+}
+
+#project-grid {
+    box-sizing: border-box;
+    /* background-color: green; */
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#contact-section {
+    background: linear-gradient(-35deg, var(--gradient-color-2), var(--gradient-color-1));
+    color: var(--contact-text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+#contact-section h2 {
+    margin-bottom: 30px;
+}
+
+#contact-grid {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    #project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #project-grid {
+        grid-template-columns: 1fr;
+    }
+}
