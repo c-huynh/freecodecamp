@@ -1,18 +1,16 @@
 import React from 'react'
 
-class ShareButton extends React.Component {
-    constructor(props) {
-        super(props);
+const ShareButton = (props) => {
+    let backgroundColor = {
+        backgroundColor: props.color
     }
-    render() { 
-        return (
-            <button className='shareButton'>
-                <a id={this.props.id} href={this.props.href} target="_blank">
-                    <i className={this.props.iconClass}></i>
-                </a>
-            </button>
-        )
-    }
+    return (
+        <button className='share-button' style={backgroundColor}>
+            <a id={props.id} href={props.href} target="_blank" rel="noopener noreferrer">
+                <i className={props.iconClass}></i>
+            </a>
+        </button>
+    )
 }
 
 export default ShareButton

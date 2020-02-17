@@ -1,14 +1,12 @@
 import React from 'react'
 
-class Author extends React.Component {
-    constructor(props) {
-        super(props);
+const Author = (props) => {
+    let color = {
+        color: props.color
     }
-    render() { 
-        return (
-            <h2 id='author'>- {this.props.author}</h2>
-        )
-    }
+    return (
+        <h2 id='author' style={color}>- {props.author}</h2>
+    );
 }
 
 export default Author

@@ -68,18 +68,46 @@ class App extends React.Component {
     }
     
     render() {
+        let backgroundColor = {
+            backgroundColor: this.state.color
+        }
+        
         return (
-        <div id='quote-box'>
-            <Quote quote={this.state.text}/>
-            <Author author={this.state.author}/>
-            <div className='buttonArea'>
-                <div className='shareButtonArea'>
-                    <ShareButton id={'tweet-quote'} href={'https://www.twitter.com'} iconClass={'fab fa-twitter'}/>
-                    <ShareButton id={'tumblr-quote'} href={'https://www.tumblr.com'} iconClass={'fab fa-tumblr'}/>
+        <div id='container' style={backgroundColor}>
+            <div id='quote-box'>
+                <Quote
+                    quote={this.state.text}
+                    color={this.state.color}
+                />
+                <Author
+                    author={this.state.author}
+                    color={this.state.color}
+                />
+                <div className='button-area'>
+                    <div className='share-button-area'>
+                        <ShareButton
+                            id={'tweet-quote'}
+                            href={'https://www.twitter.com/intent/tweet'}
+                            iconClass={'fab fa-twitter'}
+                            color={this.state.color}
+                        />
+                        <ShareButton
+                            id={'tumblr-quote'}
+                            href={'https://www.tumblr.com'}
+                            iconClass={'fab fa-tumblr'}
+                            color={this.state.color}
+                        />
+                    </div>
+                    <ActionButton
+                        id={'new-quote'}
+                        text={'New Quote'}
+                        handleClick={this.getRandomQuote}
+                        color={this.state.color}
+                    />
                 </div>
-                <ActionButton id={'new-quote'} text={'New Quote'} handleClick={this.getRandomQuote}/>
             </div>
-        </div>);
+        </div>
+        );
     }
 }
 

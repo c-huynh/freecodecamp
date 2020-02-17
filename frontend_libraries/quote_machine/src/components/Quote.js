@@ -1,14 +1,12 @@
 import React from 'react'
 
-class Quote extends React.Component {
-    constructor(props) {
-        super(props);
+const Quote = (props) => {
+    let color = {
+        color: props.color
     }
-    render() { 
-        return (
-            <h1 id='text'>"{this.props.quote}"</h1>
-        )
-    }
+    return (
+        <h1 id='text' style={color}>"{props.quote}"</h1>
+    )
 }
 
 export default Quote

@@ -1,14 +1,12 @@
 import React from 'react'
 
-class ActionButton extends React.Component {
-    constructor(props) {
-        super(props);
+const ActionButton = (props) => {
+    let backgroundColor = {
+        backgroundColor: props.color
     }
-    render() { 
-        return (
-            <button onClick={this.props.handleClick} id={this.props.id} className='actionButton'>{this.props.text}</button>
-        )
-    }
+    return (
+        <button style={backgroundColor} onClick={props.handleClick} id={props.id} className='action-button'>{props.text}</button>
+    )
 }
 
 export default ActionButton
