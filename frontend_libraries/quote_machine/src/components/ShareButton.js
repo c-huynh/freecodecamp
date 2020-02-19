@@ -1,8 +1,13 @@
 import React from 'react'
 
 const ShareButton = (props) => {
+    let transitionDuration = 0.8;
+    let transitionFunction = 'ease-in-out';
     let backgroundColor = {
-        backgroundColor: props.color
+        backgroundColor: props.color,
+        transition: `all ${transitionDuration}s ${transitionFunction}`,
+        WebkitTransition: `all ${transitionDuration}s ${transitionFunction}`,
+        MozTransition: `all ${transitionDuration}s ${transitionFunction}`
     }
     return (
         <button className='share-button' style={backgroundColor}>
