@@ -3,7 +3,7 @@ import React from 'react'
 const Toggle = (props) => {
     return (
         <div>
-            <p className="toggle-label">{props.label}</p>
+            <h3 className="toggle-label">{props.label}</h3>
             <label className="switch">
                 <input
                     onChange={props.handleClick}

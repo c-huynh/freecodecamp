@@ -1,52 +1,20 @@
 import React from 'react';
 import DrumPad from './DrumPad'
 
-const DrumKeys = [
-    {
-        name: 'Q',
-        keyCode: 81
-    },
-    {
-        name: 'W',
-        keyCode: 87
-    },
-    {
-        name: 'E',
-        keyCode: 69
-    },
-    {
-        name: 'A',
-        keyCode: 65
-    },
-    {
-        name: 'S',
-        keyCode: 83
-    },
-    {
-        name: 'D',
-        keyCode: 68
-    },
-    {
-        name: 'Z',
-        keyCode: 90
-    },
-    {
-        name: 'X',
-        keyCode: 88
-    },
-    {
-        name: 'C',
-        keyCode: 67
-    }
-]
 const DrumPadBank = (props) => {
+    let bank = props.bank;
     return (
         <React.Fragment>
-            {DrumKeys.map(item => (
+            {bank.map(item => (
                 <DrumPad
                     powerOn={props.powerOn}
-                    name={item.name}
+                    keyLetter={item.key}
                     keyCode={item.keyCode}
+                    key={item.keyCode}
+                    clipID={item.id}
+                    clipSRC={item.src}
+                    volume={props.volume}
+                    updateDisplay={props.updateDisplay}
                 />
             ))}
         </React.Fragment>

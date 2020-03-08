@@ -5,8 +5,9 @@ const Slider = (props) => {
         <div className="slidecontainer">
             <input
                 type="range"
-                min="1"
-                max="100"
+                min="0"
+                max="1"
+                step="0.01"
                 value={props.value}
                 className="slider"
                 id="myRange"

@@ -15,7 +15,7 @@ body {
 }
 
 #drum-machine {
-    background-color: yellow;
+    background-color: black;
     height: 400px;
     width: 800px;
     display: flex;
@@ -24,12 +24,12 @@ body {
 #drum-pad-container {
     width: 400px;
     height: 100%;
-    background-color: blue;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
+    padding: 1rem;
 }
 
 #controls-container {
@@ -41,9 +41,9 @@ body {
 }
 
 #display {
-    width: 150px;
+    width: 200px;
     height: 50px;
-    background-color: teal;
+    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@ body {
 .drum-pad {
     height: 90%;
     width: 90%;
-    background-color: red;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,6 +125,7 @@ input:checked + .toggle-slider:before {
 
 .toggle-label {
     text-align: center;
+    color: white;
 }
 
 /* SLIDER */
@@ -155,7 +156,7 @@ input:checked + .toggle-slider:before {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: red;
   cursor: pointer;
 }
 
@@ -163,7 +164,7 @@ input:checked + .toggle-slider:before {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: red;
   cursor: pointer;
 }
 
