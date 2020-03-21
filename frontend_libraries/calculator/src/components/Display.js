@@ -2,9 +2,9 @@ import React from 'react'
 
 const Display = (props) => {
     return (
-        <div id="display">
+        <div id="display-area">
             <p className="expression">{props.expression}</p>
-            <p className="result">{props.current}</p>
+            <p id="display" className="result">{props.current}</p>
         </div>
     )
 }

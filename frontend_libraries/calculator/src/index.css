@@ -29,7 +29,7 @@ body {
     "zero zero decimal equals";
 }
 
-#display {
+#display-area {
     grid-area: display;
     background-color: blue;
     display: flex;
@@ -39,7 +39,7 @@ body {
     padding: 1rem;
 }
 
-#display p {
+#display-area p {
     margin: 0;
 }
 

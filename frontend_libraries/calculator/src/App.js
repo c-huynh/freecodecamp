@@ -30,7 +30,7 @@ class App extends React.Component {
 
         let FirstDigitIsZero = /^0/;
         let hasOperator = /[*/+-]/;
-        let hasDecimal = /./;
+        let hasDecimal = /[.]/;
         let isZeroDecimal = /^0./;
         if (!FirstDigitIsZero.test(this.state.expression) || isZeroDecimal.test(this.state.current) || hasOperator.test(this.state.current) || hasDecimal.test(this.state.current)) {
             this.setState(state => ({
@@ -46,16 +46,37 @@ class App extends React.Component {
     }
     
     handleOperator(operator) {
+        let operators = /[*/+-]+$/;
         if (this.state.current !== '') {
-            this.setState(state => ({
-                current: operator,
-                expression: this.state.result !== ''
-                ? state.result + operator
-                : state.current === '0'
-                ? state.current + operator
-                : state.expression + operator,
-                result: ''
-            }))
+            if (this.state.result !== ''){
+                this.setState(state => ({
+                    current: operator,
+                    expression: state.result + operator,
+                    result: ''
+                }))
+            } else if (this.state.expression.match(operators)) {
+                if (this.state.expression.match(operators)[0].length === 1) {
+                    this.setState(state =>({
+                        current: operator,
+                        expression: operator === '-'
+                        ? state.expression + operator
+                        : state.expression.slice(0, -1) + operator,
+                        result: ''
+                    }))
+                } else if (this.state.expression.match(operators)[0].length === 2){
+                    this.setState(state => ({
+                        current: operator,
+                        expression: state.expression.slice(0, -2) + operator,
+                        result: ''
+                    }))
+                }
+            } else {
+                this.setState(state => ({
+                    current: operator,
+                    expression: state.expression + operator,
+                    result: ''
+                }))
+            }
         }
     }
     
@@ -75,13 +96,11 @@ class App extends React.Component {
     }
     
     handleEquals() {
-        let lastDigit = /\d$/;
-        if (lastDigit.test(this.state.expression)) {
-            this.setState(state => ({
-                current: eval(state.expression),
-                result: eval(state.expression)
-            }))
-        }
+        
+        this.setState({
+            current: eval(this.state.expression),
+            result: eval(this.state.expression)
+        })
     }
     
     render() {
