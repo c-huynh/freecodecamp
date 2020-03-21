@@ -2,11 +2,13 @@ import React from 'react'
 
 const hoverStyle = {
     borderStyle: 'solid',
-    borderColor: 'magenta'
+    borderColor: 'lightblue',
+    color: 'lightblue'
 }
 
 const inactiveStyle = {
-    border: 'none'
+    border: 'none',
+    color: 'black'
 }
 
 class CalculatorButton extends React.Component {

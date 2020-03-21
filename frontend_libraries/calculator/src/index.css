@@ -15,7 +15,8 @@ body {
 }
 
 #calculator {
-    background-color: yellow;
+    background-color: black;
+    padding: .5rem;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(4, 80px);
@@ -31,7 +32,7 @@ body {
 
 #display-area {
     grid-area: display;
-    background-color: blue;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,6 +42,8 @@ body {
 
 #display-area p {
     margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
 }
 
 #clear {
@@ -119,12 +122,13 @@ body {
 }
 
 .operator {
-    background-color: lightgrey;
+    background-color: blue;
 }
 
 .calculator-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    font-size: 1.5rem;
 }
