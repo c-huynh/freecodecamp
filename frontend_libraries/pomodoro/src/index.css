@@ -13,6 +13,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #0e38a1;
+    color: white;
 }
 
 #input-section {
@@ -23,12 +25,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-color: black;
+    justify-content: center;
+    /* border-color: black; */
     border-width: 2px;
     border-style: solid;
-    border-radius: 1rem;
+    border-radius: 50%;
     padding: 2rem;
     margin-bottom: 3rem;
+    width: 300px;
+    height: 300px;
 }
 
 #timer-label {
@@ -38,6 +43,7 @@ body {
 #time-left {
     font-size: 4rem;
     margin: 1rem;
+    font-weight: 300;
 }
 
 .length-input {
@@ -61,6 +67,9 @@ body {
 .length {
     font-size: 3rem;
     margin: 0;
+    width: 50px;
+    text-align: center;
+    font-weight: 300;
 }
 
 .label {
