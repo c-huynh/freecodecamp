@@ -1,3 +1,7 @@
+# Pomodoro Clock
+
+Page can be viewed on Codepen: [Pomodoro Clock](https://codepen.io/c-huynh/full/WNvPmdz)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

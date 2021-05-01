@@ -1,3 +1,7 @@
+# Drum Machine
+
+Page can be viewed on Codepen: [Drum Machine](https://codepen.io/c-huynh/full/BaNmbWx)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,3 +1,7 @@
+# Javascript Calculator
+
+Page can be viewed on Codepen: [Javascript Calculator](https://codepen.io/c-huynh/full/VwLdRpq)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

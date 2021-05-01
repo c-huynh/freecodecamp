@@ -1,3 +1,7 @@
+# Random Quote Machine
+
+Page can be viewed on Codepen: [Random Quote Machine](https://codepen.io/c-huynh/full/wvaWYpd)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
